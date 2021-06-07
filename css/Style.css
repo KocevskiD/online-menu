@@ -1,585 +1,192 @@
-@import url("../css/fonts.css");
-
-
-html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;   
-}
-:root{
-    /* Theme colors*/
-    --text-gray: #3f4954;
-    --text-light: #686666da;
-    --bg-color: #0f0f0f;
-    --white: #ffffff;
-    --midnight: #104f55;
-    --orange: rgb(255, 99, 43);
-    /*gradient color*/
-    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-
-
-    /*------Theme font-family---------*/
-    --Abel: 'Abel'; 
-    --Anton: 'Anton';
-    --Josefin: 'Josefin';
-    --Lexend: 'Lexend';
-    --Livvic: 'Livvic';
-    --Syne-Mono: 'Syne-Mono';
-    
-
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/*---------Global Classes---------*/
-a{
-    text-decoration: none;
-    
-}
-ul{
-    list-style-type: none;
-}
-h1{
-    
-    font-size: 2.5rem;
-}
-h3{
-    
-    font-size: 1.3rem;
+.home-page {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/assets/friends-building.png");
+  background-size: cover;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  background-color: #302f2e;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0 2em;
+}
 
-.flex-row{
+nav a {
+  margin-left: 0.5em;
+}
+
+nav #about-us {
+  white-space: nowrap;
+}
+
+.logo {
+  color: #e2e2e2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  background-image: url("/assets/friends-bar-grill-image.png");
+  background-size: cover;
+  height: 7vh;
+  width: 12em;
+  margin-top: -0.3em;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: #e2e2e2;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #e2e2e2;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#language-button {
+  background-color: cadetblue;
+  padding: 0.2em 0.5em;
+  border: none;
+  border-radius: 10px;
+}
+
+#language-button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #302f2e;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-/*-----*----Global Classes-----*----*/
-/* -------------navbar------------*/
-.nav{
-    
-    padding: 0.2rem 1rem;
-    height: 11vh;
-    min-height: 5em;
-    overflow: hidden;
-    align-items: center; 
-    transition: height 0.3s ease-in-out;
-    
-   
-}
-.nav .nav-menu{
-    justify-content: space-between;
-}
-.nav .toggle-collapse{
-    position: absolute;
-    top: 0%;
-    width: 90%;
-    cursor: pointer;
-    display: none;
-}
-.nav .toggle-collapse .toggle-icons{
-    display: flex;
-    justify-content: flex-end;
-    padding: 1.7em 0;
-}
-.nav .toggle-collapse .toggle-icons i{
-    font-size: 1.4rem;
-    color: white;
-}
-.collapse{
-    height: 30em;
-}
-.nav .nav-items{
-    display: flex;
-    margin: 0;
-    margin-top: -0.1em;
-}
-body > nav.nav > div > div.abe > ul > li:nth-child(1):hover{
-    background-color: rgb(252, 30, 30);
-    padding-top: 0.9em;
-    cursor: pointer;
-    
-}
-body > nav.nav > div > div.abe > ul > li:nth-child(2):hover{
-    background-color: rgb(252, 30, 30);
-    padding-top: 0.9em;
-    cursor: pointer;
-    
-}
-body > nav.nav > div > div.abe > ul > li:nth-child(3):hover{
-    background-color: rgb(252, 30, 30);
-    padding-top: 0.9em;
-    cursor: pointer;
-}
-body > nav.nav > div > div.abe > ul > li:nth-child(4):hover{
-    background-color: rgb(252, 30, 30);
-    padding-top: 0.9em;
-    cursor: pointer;
-}
-body > nav > div > div:nth-child(3) > ul > li> h3{
-    color: white;
-    
-}
-.nav .nav-items .nav-link{
-    padding: 1.1em 1em;
-    margin-top: 0.6em;
-    font-size: 1.2rem;
-    position: relative;
-    color: var(--text-gray);
-}
-
-.nav .nav-items .nav-link:hover h3{
-    color: black;
-    font-weight: 600;
-}
-
-.nav .nav-brand a{
-    font-size: 1.6rem;
-    padding: 1.3em 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
     display: block;
-    font-size: 1.6rem;
-    color: var(--text-gray);
-   
-}
-
-.nav .social{
-    padding: 1.4em 0;
-    margin-top: 0.5em;
-    
-}
-.fas{
-    color: white;
-}
-.nav .social i{
-    padding: 0 .2em;
-    color: white;
-}
-
-
-.flex-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.friends-bar-grill-image{
-    position: absolute;
-    width: 8em;
-    padding: 0.5em 0.5em;
-    padding-right: 2em;
-    margin-top: 0.5em;
-    margin-left: 4em;
-
-    
-}
-
-
-.interior-pizza-here{
-    display: none;
-}
-.nav-link{
-    color: white;
-}
-
-.interior-pizza-here-1{
-    display: none;
-}
-.interior-pizza-here-2{
-    display: none;
-}
-.interior-pizza-here-3{
-    display: none;
-}
-.interior-pizza-here-4{
-    display: none;
-}
-body > nav > div > div.social.text-gray > a:nth-child(1) > i:hover{
-    animation-name: facebook;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-
-
-@keyframes facebook{
-    0%{
-        color: rgb(66,103,178);
-    }
-    25%{
-        color: rgb(90, 82, 255);
-    }
-    40%{
-        color:  rgb(255,255,255);
-    }
-    60%{
-        color: rgb(26, 17, 66);
-    }
-    85%{
-        color: rgb(4, 131, 181);
-    }
-    100%{
-        color: rgb(66,103,178);
-    }
-}
-body > nav > div > div.social.text-gray > a:nth-child(2) > i:hover{
-    animation-name: instagram;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-}
-@keyframes instagram {
-    0%{
-        color: rgb(131,58,180);
-    }
-    17%{
-        color: rgb(253,29,29);
-    }
-    35%{
-        color: rgb(245,96,64);
-    }
-    60%{
-        color: rgb(247,119,55);
-    }
-    82%{
-        color: rgb(255,220,128);
-    }
-    100%{
-        color: rgb(131,58,180);
-    }
-
-}
-body > nav > div > div.abe > ul > li:nth-child(1) > h3,
-body > nav > div > div.abe > ul > li:nth-child(2) > h3,
-body > nav > div > div.abe > ul > li:nth-child(3) > h3,
-body > nav > div > div.abe > ul > li:nth-child(4) >h3{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.4em;
-    font-weight: 500;
-    margin-top: -0.1em;
-    
-}
-
-
-/* -------*------navbar-------*-----*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------- */
-.main-page{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 55rem;
-    background-image: url("../assets/pasta-image.png");
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    display: block;
-}
-/*---------------------------------------------------------------------------------------*/
-.food{
-    height: auto;
-    width: 100%;
-    margin-top: 48em;   
-    padding-top: 0.1em; 
-    background-image: url("/assets/desk-image.jpeg");
-    background-position: center;
-    background-size: cover;
-}
-
-.flexed-food{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-    text-align: center;
-    flex-wrap: wrap;
-    padding-top: 5em;
-    padding-bottom: 5em;
-}
-.flexed-first-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.flexed-second-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.breakfast,
-.pizza,
-.burger,
-.pasta,
-.delicatessen,
-.dessert{
-    height: 16em;
-    width: auto;
-    min-width: 15em;
-    max-width: 15em;
-    margin: 1em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid black;
-    z-index: 2;
-}
-.breakfast:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
     cursor: pointer;
-}
-.pizza:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-    cursor: pointer;
-}
-.burger:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-    cursor: pointer;
-}
-.pasta:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-    cursor: pointer;
-}
-.delicatessen:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-    cursor: pointer;
-}
-.dessert:hover{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-    cursor: pointer;
+  }
 }
 
-.pizza-image-flex,
-.burger-image-flex,
-.pasta-image-flex,
-.delicatessen-image-flex,
-.dessert-image-flex,
-.breakfast-image-flex{
-    height: 12em;
-    width: 12em;
-    color: gray;
-    z-index: 1;
-    text-align: center;
-    padding: 0.5em;
-    margin: 1em;
-    border-radius: 10px;
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
-.breakfast-image-flex{
-    background-image: url("/assets/breakfast-image-friends-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.pizza-image-flex{
-    background-image: url("/assets/pizza-image-friends-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.burger-image-flex{
-    background-image: url("/assets/burger-image-friends-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.pasta-image-flex{
-    background-image: url("/assets/pasta-image-friends-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.delicatessen-image-flex{
-    background-image: url("/assets/delikatessen-image-friends-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.dessert-image-flex{
-    background-image: url("/assets/dessert-image-freinds-bar-grill.png");
-    background-size: cover;
-    background-position: center;
-}
-.breakfast-text,
-.pizza-text,
-.burger-text,
-.pasta-text,
-.delicatessen-text,
-.dessert-text{
-    margin-bottom: 1em;
-    border-radius: 50px;
-    width: 9em;
-    border: none;
-    background: transparent;
-    
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-.breakfast:hover .breakfast-text{
-    border: 2px solid rgb(252, 150, 150);
-}
-.pizza:hover .pizza-text{
-    border: 2px solid rgb(252, 150, 150);
-}
-.burger:hover .burger-text{
-    border: 2px solid rgb(252, 150, 150);
-}
-.pasta:hover .pasta-text{
-    border: 2px solid rgb(252, 150, 150);
-}
-.delicatessen:hover .delicatessen-text{
-    border: 2px solid rgb(252, 150, 150);
-}
-.dessert:hover .dessert-text{
-    border: 2px solid rgb(252, 150, 150);
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
-.tomato-image-png{
-    background-image: url("/assets/lunch-image.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 2;
-    position: absolute;
-    height: 32em;
-    width: 28em;
-    left: -15em; 
-    margin-top: 5em; 
-}
-.drinks{
-    height: auto;
-    width: 100%;
-    margin-top: 48em;   
-    padding-top: 0.1em; 
-    background-image: url("/assets/desk-image.jpeg");
-    background-position: center;
-    background-size: cover;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---------------------------------------------------------------------------------------------- */
-/* ------- Vieport less than or equal to 750px---------*/
-
-@media only screen and (max-width: 750px){
-    .nav .nav-menu, .nav .nav-items{
-        flex-direction: column;
-        
-    }
-    .nav .toggle-collapse{
-        display: initial;
-        z-index: 1;
-    }
-    body > nav > div > div:nth-child(3){
-        margin-top: 3em;
-        height: 25em;
-        height: 100%;
-    }
- 
-    body > nav > div > div:nth-child(3) > ul>li{     
-        margin-top: 2.5;
-        margin-bottom: 1.5;
-        margin-left: -2.5em;
-       box-shadow: 0px 0px 30px black;
-       
-    }
-    body > nav > div > div.abe > ul > li:nth-child(1) > h3,
-    body > nav > div > div.abe > ul > li:nth-child(2) > h3,
-    body > nav > div > div.abe > ul > li:nth-child(3) > h3,
-    body > nav > div > div.abe > ul > li:nth-child(4) > h3{
-
-        font-family: 'Courier New', Courier, monospace;        
-        width: 35%;
-        margin: auto;
-        font-weight: 500;
-        color: rgb(255, 255, 255);
-    }
-    body > nav.nav.collapse > div > div.abe > ul > li:nth-child(3) > h3{
-        width: 100%;
-        
-    }
-    body > nav.nav.collapse > div > div.abe > ul > li:nth-child(4) > h3{
-        width: 100%;
-        
-    }
-    
-    body > nav > div > div:nth-child(3) > ul > li:nth-child(1){
-        z-index: 3;
-        border-radius: 5px;
-    }
-    body > nav > div > div:nth-child(3) > ul > li:nth-child(2){
-        top:0.5em;
-        border-radius: 5px;
-        z-index: 3;
-    }
-    body > nav > div > div:nth-child(3) > ul > li:nth-child(3){
-        top:1em;
-        border-radius: 5px;
-        z-index: 3;
-    }
-    body > nav > div > div:nth-child(3) > ul > li:nth-child(4){
-        top:1.5em;
-        border-radius: 5px;
-        z-index: 3;    
-    }
-    .social{
-        display: none;
-    }
-    .friends-bar-grill-image{
-        left: -4em;
-        margin-top: 0.2em;
-    }
-    .friends-building-image{
-        display: show;
-        z-index: -2;
-    }
-    .flexed-food{
-        flex-direction: column;
-        align-items: center;
-        margin: auto;
-        padding-top: 2em;
-        padding-bottom: 2em;
-    }
-    .flexed-first-row{
-        flex-direction: column;
-    }
-    .flexed-second-row{
-        flex-direction: column;
-    }
-    
-    .breakfast,
-    .pizza,
-    .burger,
-    .pasta,
-    .delicatessen,
-    .dessert{
-    box-shadow: 0px 0px 20px red;
-    border: 1px solid red;
-}
-.breakfast-text,
-.pizza-text,
-.burger-text,
-.pasta-text,
-.delicatessen-text,
-.dessert-text{
-    border: 2px solid rgb(252, 150, 150);
-    font-size: 0.85rem;
-}
-.tomato-image-png{
-    margin-left: -9em;
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-    
+.toggle .line2 {
+  opacity: 0;
 }
 
-/* ----*--- Vieport less than or equal to 750px----*-----*/
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+/*# sourceMappingURL=style.css.map */
