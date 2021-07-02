@@ -50,10 +50,15 @@ a {
 .logo {
   cursor: pointer;
   z-index: 50;
+  position: relative;
 }
 .friends_logo{
   height: 6em;
   width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
 }
 
 .nav {
