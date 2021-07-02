@@ -1,0 +1,61 @@
+.two-columns-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.tart, .fruits {
+  width: 70%;
+}
+
+.top-tart, .top-fruits, .about-us {
+  text-align: center;
+}
+
+.about-us, .read-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.welcome {
+  font-weight: 100;
+}
+
+.about-paragraph {
+  font-size: 1.4rem;
+  color: #afafaf;
+  line-height: 1.5;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.btn:hover {
+  color: #c59d5f;
+}
+
+.third-grid {
+  margin-top: 10rem;
+}
+/*# sourceMappingURL=about.css.map */
