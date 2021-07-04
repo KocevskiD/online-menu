@@ -5,7 +5,7 @@
 .menu-header{
     height: 50vh;
     width: 100%;
-    background: url("/assets/group-of-people-making-toast.jpg") no-repeat center;
+    background: url("/assets/friends-interior.jpg") no-repeat center;
     background-size: cover;
     
 }
@@ -19,10 +19,19 @@
     
     
 }
+.menu_image_plate{
+    height: 8em;
+    width: 8em;
+    margin-top: 2em;
+}
 
 .menu-card-header{
     text-align: center;
     
+}
+.price{
+    font-size: 0.5rem;
+    color: red;
 }
 .fish{
     margin-top: 5rem;
@@ -33,7 +42,20 @@
     margin-bottom: 1rem;
     
 }
-.starters h2, .mains h2{
+
+
+.starter{
+    
+    display: none;
+}
+.salad{
+    
+    display: none;
+}
+
+
+
+.starters h2{
     color: #ff7417;
     text-align: center;
     font-family: "Cormorant Garamond";
@@ -41,6 +63,8 @@
     margin-top: 5rem;
     font-weight: 300;
     margin-bottom: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 .starter-header{
     display: flex;
@@ -48,6 +72,7 @@
     align-items: center;
     border-bottom: 1px dashed #afafaf;
     margin-bottom: 1.5rem;
+    
 }
 .starter-header h3{
     font-size: 1.3rem;
@@ -55,6 +80,38 @@
     font-weight: 300;
 }
 .starter-header h4{
+    font-size: 1.8rem;
+    font-weight: 300;
+
+}
+
+
+
+.salads h2{
+    color: #ff7417;
+    text-align: center;
+    font-family: "Cormorant Garamond";
+    font-size: 3rem;
+    margin-top: 5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.salad-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #afafaf;
+    margin-bottom: 1.5rem;
+    
+}
+.salad-header h3{
+    font-size: 1.3rem;
+    margin-right: 2rem;
+    font-weight: 300;
+}
+.salad-header h4{
     font-size: 1.8rem;
     font-weight: 300;
 
