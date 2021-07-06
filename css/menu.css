@@ -4,16 +4,16 @@
 }
 
 .menu-header {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  background: url("/assets/friends-interior.jpg") no-repeat center;
+  background: url("/assets/friends-interior.png") no-repeat center;
   background-size: cover;
 }
 
 .menu-card {
   background-color: #fff;
   width: 80%;
-  margin: -30rem auto;
+  margin: -22rem auto;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -45,20 +45,24 @@
   margin-bottom: 1rem;
 }
 
-.starter {
+.section-subtitle {
+  margin-bottom: 5rem;
+}
+
+.starters, .salads, .pizzas, .pastas {
+  padding: 1rem;
+}
+
+.starter, .salad, .pizza, .pasta {
   display: none;
 }
 
-.salad {
-  display: none;
-}
-
-.starters h2 {
+.starters h2, .salads h2, .pizzas h2, .pastas h2 {
   color: #ff7417;
   text-align: center;
   font-family: "Cormorant Garamond";
   font-size: 3rem;
-  margin-top: 5rem;
+  margin-top: -1rem;
   font-weight: 300;
   margin-bottom: 2rem;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
@@ -66,7 +70,11 @@
   border-radius: 10px;
 }
 
-.starter-header {
+.starters h2:hover, .salads h2:hover, .pizzas h2:hover, .pastas h2:hover {
+  cursor: pointer;
+}
+
+.starter-header, .salad-header, .pizza-header, .pasta-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,51 +88,13 @@
   margin-bottom: 1.5rem;
 }
 
-.starter-header h3 {
+.starter-header h3, .salad-header h3, .pizza-header h3, .pasta-header h3 {
   font-size: 1.3rem;
   margin-right: 2rem;
   font-weight: 300;
 }
 
-.starter-header h4 {
-  font-size: 1.8rem;
-  font-weight: 300;
-}
-
-.salads h2 {
-  color: #ff7417;
-  text-align: center;
-  font-family: "Cormorant Garamond";
-  font-size: 3rem;
-  margin-top: 5rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.salad-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px dashed #afafaf;
-  margin-bottom: 1.5rem;
-}
-
-.salad-header h3 {
-  font-size: 1.3rem;
-  margin-right: 2rem;
-  font-weight: 300;
-}
-
-.salad-header h4 {
+.starter-header h4, .salad-header h4, .pizza-header h4, .pasta-header h4 {
   font-size: 1.8rem;
   font-weight: 300;
 }
