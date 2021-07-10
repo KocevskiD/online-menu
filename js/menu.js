@@ -43,4 +43,9 @@ $(document).ready(function(){
     $(".buritos").click(function(){
         $(".burito").toggle();
     })
+
+    $(".desserts").click(function(){
+        $(".dessert").toggle();
+    })
+    
 })

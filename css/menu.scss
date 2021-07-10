@@ -46,12 +46,12 @@
 .section-subtitle{
     margin-bottom: 5rem;
 }
-.starters, .salads, .pizzas, .pastas, .grills, .rizotos, .breadmeats, .boards, .orders, .burgers, .buritos{
+.starters, .salads, .pizzas, .pastas, .grills, .rizotos, .breadmeats, .boards, .orders, .burgers, .buritos, .desserts{
     
 padding: 1rem;
 }
 
-.starter, .salad, .pizza, .pasta, .grill, .rizoto, .breadmeat, .board, .order, .burger, .burito{
+.starter, .salad, .pizza, .pasta, .grill, .rizoto, .breadmeat, .board, .order, .burger, .burito, .dessert{
     
     display: none;
 }
@@ -60,7 +60,7 @@ padding: 1rem;
 
 
 .starters h2, .salads h2, .pizzas h2, .pastas h2, .grills h2, .rizotos h2, .breadmeats h2, .boards h2,  
-.orders h2, .burgers h2, .buritos h2{
+.orders h2, .burgers h2, .buritos h2, .desserts h2{
     color: #ff7417;
     text-align: center;
     font-family: "Cormorant Garamond";
@@ -78,7 +78,7 @@ padding: 1rem;
     }
 }
 .starter-header, .salad-header, .pizza-header ,.pasta-header, .grill-header, .rizoto-header, .breadmeat-header, 
-.board-header, .order-header, .burger-header, .burito-header{
+.board-header, .order-header, .burger-header, .burito-header, .dessert-header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,13 +87,13 @@ padding: 1rem;
     
 }
 .starter-header h3, .salad-header h3, .pizza-header h3, .pasta-header h3, .grill-header h3 , .rizoto-header h3, 
-.breadmeat-header h3, .board-header h3, .order-header h3, .burger-header h3, .burito-header h3{
+.breadmeat-header h3, .board-header h3, .order-header h3, .burger-header h3, .burito-header h3, .dessert-header h3{
     font-size: 1.3rem;
     margin-right: 2rem;
     font-weight: 300;
 }
 .starter-header h4, .salad-header h4 , .pizza-header h4, .pasta-header h4, .grill-header h4, .rizoto-header h4,
-.breadmeat-header h4, .board-header h4, .order-header h4, .burger-header h4, .burito-header h4{
+.breadmeat-header h4, .board-header h4, .order-header h4, .burger-header h4, .burito-header h4, .dessert-header h4{
     font-size: 1.8rem;
     font-weight: 300;
 
