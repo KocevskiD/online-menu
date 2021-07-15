@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.read-more{
+    max-width: 80%;
+}
 
 .tart, .fruits{
 width: 70%;
@@ -29,6 +32,7 @@ width: 70%;
     line-height: 1.5;
     margin-top: 3rem;
     margin-bottom: 5rem;
+    text-align: center;
 }
 .btn{
     text-transform: uppercase;

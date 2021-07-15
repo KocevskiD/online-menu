@@ -6,6 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat&family=Sacramento&display=swap"
       rel="stylesheet"
@@ -41,7 +45,7 @@
     <title>Friends Bar&Grill</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="home">
       <div class="container-fluid">
         <nav class="nav">
           <a href="index.html" class="logo">
@@ -60,10 +64,6 @@
             <li class="nav-item">
               <a href="#home" class="nav-link">Дома</a>
             </li>
-            
-            <li class="nav-item">
-              <a href="#team" class="nav-link">Одговорни</a>
-            </li>
             <li class="nav-item">
               <a href="#menu" class="nav-link">Мени</a>
             </li>
@@ -71,11 +71,11 @@
               <a href="#language" class="nav-link">ЈАЗИК: MKD</a>
             </li>
             <li class="nav-item">
-              <a href="#menu" class="nav-link">Контакт</a>
+              <a href="#contact" class="nav-link">Контакт</a>
             </li>
             <ul class="icons">
-              <li class="icon"><i class="fab fa-facebook-f"><a href="https://www.facebook.com/grillbarfriends"></a></i></li>
-              <li class="icon"><i class="fab fa-instagram"><a href="https://www.instagram.com/friends_bar_grill/"></a></i></li>
+              <li class="icon"><a href="https://www.facebook.com/grillbarfriends"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="icon"><a href="https://www.instagram.com/friends_bar_grill/"><i class="fab fa-instagram"></i></a></li>
             </ul>
             
           </ul>
@@ -90,7 +90,7 @@
 
           <div class="restaurant-title">
             <h2 class="title">
-              Добредојдовте<br />
+              I'LL BE THERE FOR YOU<br />
               
             </h2>
           </div>
@@ -103,17 +103,30 @@
           <h2 class="section-title">Понуда</h2>
           <h3 class="section-subtitle">од нашите срца</h3>
           <div class="three-columns-grid">
-            <div class="grid-item">
+            <div class="grid-item" 
+
+              data-aos="fade-right"
+              data-aos-offset="400" 
+              data-aos-offset="1000">
               <img src="/assets/coffee.png" alt="" width="200" />
               <h3 class="subtitle"><strong>Врвно </strong>Кафе</h3>
               <p></p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item"
+            data-aos="fade-up"
+            data-aos-offset="400" 
+            data-aos-offset="1000"
+            
+            >
               <img src="/assets/quality-products.png" alt="" width="200" />
               <h3 class="subtitle"><strong>Квалитетни </strong>Продукти</h3>
               <p></p>
             </div>
-            <div class="grid-item">
+            <div class="grid-item"
+            data-aos="fade-left"
+              data-aos-offset="400" 
+              data-aos-offset="1000"
+            >
               <img src="/assets/healthy-meal.png" alt="" width="200" />
               <h3 class="subtitle"><strong>Здрави </strong>Оброци</h3>
               <p></p>
@@ -122,32 +135,50 @@
         </div>
       </section>
 
+      <section class="about" id="about">
+                <div class="container-fluid">
+                    
 
-      <section class="team" id="team">
-        <div class="container">
-          <h2 class="section-title">Co-Founders</h2>
-          <h3 class="section-subtitle"></h3>
-          <div class="four-columns-grid">
-            <div class="team-member">
-              <img src="/assets/dino_jan.png" alt="Team Member 1" class="dino-image"/>
-              <h2 class="name">Dino Janackovski</h2>
-              <h3 class="position">CEO</h3>
-              <p class="description-paragraph">Co-founded Friends Bar&Gril</p>
-            </div>
+                    <div class="two-columns-grid third-grid">
+                        <div
+                            class="read-more"
+                            data-aos="fade-right"
+                            data-aos-offset="200"
+                            data-aos-duration="500"
+                        >
+                            <h2 class="section-title welcome">
+                                Добредојдовте во Friends Bar&Grill
+                            </h2>
+                            <p class="about-paragraph">
+                                Организираме настани, крштевки, родендени и прослави, резервирајте го вашето место на бројот подолу.
+                            </p>
+                            <h4>078 490 910</h4>
+                        </div>
+                        <div
+                            class="top-fruits"
+                            data-aos="fade-left"
+                            data-aos-offset="200"
+                            data-aos-duration="500"
+                        >
+                            <img
+                                src="/assets/friends-inside.jpg"
+                                alt="Fruits"
+                                class="fruits"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="team-member">
-              <img src="/assets/mario-jan.png" alt="Team Member 2" class="mario-image"/>
-              <h2 class="name">Mario Janackovski</h2>
-              <h3 class="position">CEO</h3>
-              <p class="description-paragraph">Co-founded Friends Bar&Gril</p>
-            </div>
 
-          </div>
-        </div>
-      </section>
+      
     
 
-    <section class="menu" id="menu">
+    <section class="menu" id="menu"
+      data-aos="fade-up"
+      data-aos-offset="400" 
+      data-aos-offset="1000"
+    >
       <div class="menu-header">
       </div>
         <div class="menu-card">
@@ -1084,5 +1115,8 @@
     <script>
       AOS.init();
     </script>
+
+
+
   </body>
 </html>

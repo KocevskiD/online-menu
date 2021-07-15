@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -52,13 +52,12 @@ a {
   z-index: 50;
   position: relative;
 }
-.friends_logo{
+.friends_logo {
   height: 6em;
   width: auto;
   position: absolute;
   top: 0;
   left: 0;
-  
 }
 
 .nav {
@@ -79,7 +78,6 @@ a {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s;
-  
 }
 
 .open .nav::before {
@@ -96,7 +94,7 @@ a {
   top: 2rem;
   right: 2rem;
   z-index: 2000;
- 
+
   text-align: center;
   cursor: pointer;
 }
@@ -139,13 +137,13 @@ a {
 .open .nav__icon::before {
   top: 0;
   -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .open .nav__icon::after {
   top: 0;
   -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 .nav-list {
@@ -162,13 +160,13 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   z-index: 100;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -177,7 +175,7 @@ a {
 
 .open .nav-list {
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
 
 .nav-item {
@@ -218,8 +216,63 @@ a {
   margin-right: 1rem;
 }
 
-.title{
+.title {
   font-weight: 400;
   margin-top: 20rem;
 }
 /*# sourceMappingURL=style.css.map */
+
+@media only screen and (max-width: 1024px) {
+  
+  .nav-list {
+    width: 80%;
+  }
+
+  .four-columns-grid{
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  
+  
+
+  
+
+  .customers{
+    padding-top: 20rem;
+  }
+}
+
+@media only screen and(max-width: 500px){
+ 
+  .premium{
+    width: 200px;
+  }
+
+  .title{
+    font-size: 6rem;
+
+  }
+
+  .paragraph{
+    margin-bottom: 3rem;
+    margin-top: -3rem;
+
+  }
+
+  .four-columns-grid{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .slick-prev::before{
+    display: none;
+  }
+  .slick-next::before{
+    display: none;
+  }
+
+
+
+
+}

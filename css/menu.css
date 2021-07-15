@@ -3,6 +3,12 @@
   margin-top: 20rem;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
 .menu-header {
   height: 60vh;
   width: 100%;
@@ -31,8 +37,10 @@
 }
 
 .price {
-  font-size: 0.5rem;
+  font-size: 0.2rem;
   color: red;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
 }
 
 .fish {
@@ -55,6 +63,8 @@
 
 .starter, .salad, .pizza, .pasta, .grill, .rizoto, .breadmeat, .board, .order, .burger, .burito, .dessert {
   display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .starters h2, .salads h2, .pizzas h2, .pastas h2, .grills h2, .rizotos h2, .breadmeats h2, .boards h2,
@@ -88,12 +98,13 @@
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px dashed #afafaf;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.3rem;
 }
 
 .starter-header h3, .salad-header h3, .pizza-header h3, .pasta-header h3, .grill-header h3, .rizoto-header h3,
 .breadmeat-header h3, .board-header h3, .order-header h3, .burger-header h3, .burito-header h3, .dessert-header h3 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin-right: 2rem;
   font-weight: 300;
 }
@@ -105,9 +116,34 @@
 }
 
 .menu-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #afafaf;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .three-columns-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .two-columns-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .menu-card {
+    margin: -30rem auto;
+    width: 96%;
+  }
+  .read-more {
+    max-width: 96%;
+  }
+  .fruits {
+    margin-top: 2rem;
+  }
+  .about {
+    margin-top: -15rem;
+  }
 }
 /*# sourceMappingURL=menu.css.map */
