@@ -198,6 +198,7 @@ a {
   margin-right: -2px;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
+  font-weight: 700;
 }
 
 .nav-link:hover {
@@ -263,5 +264,12 @@ a {
   .slick-next::before {
     display: none;
   }
+}
+
+.number {
+  opacity: 0.8;
+  color: black;
+  letter-spacing: 0.2rem;
+  display: inline;
 }
 /*# sourceMappingURL=style.css.map */
